@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F8F9FA">
+
+    <!-- Game Title Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DAY ZERO: SURVIVAL"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#212529"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Status Stats Card Display -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:text="Loading stats..."
+        android:textSize="18sp"
+        android:textColor="#495057"
+        android:lineSpacingExtra="8sp"
+        android:layout_marginBottom="24dp"
+        android:elevation="2dp"/>
+
+    <!-- Dynamic Event Log Tracker -->
+    <TextView
+        android:id="@+id/logTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#E9ECEF"
+        android:padding="12dp"
+        android:text="A new survival journey begins."
+        android:textSize="14sp"
+        android:textColor="#343A40"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Action Button 1: Scavenge -->
+    <Button
+        android:id="@+id/btnScavenge"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="🔍 SCAVENGE FOR SUPPLIES"
+        android:textSize="16sp"
+        android:backgroundTint="#0d6efd"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Action Button 2: Rest -->
+    <Button
+        android:id="@+id/btnRest"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="⛺ REST &amp; HEAL"
+        android:textSize="16sp"
+        android:backgroundTint="#198754"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Action Button 3: Market -->
+    <Button
+        android:id="@+id/btnMarket"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="⚖️ VISIT THE TRADING MARKET"
+        android:textSize="16sp"
+        android:backgroundTint="#ffc107"
+        android:textColor="#212529"/>
+
+</LinearLayout>
