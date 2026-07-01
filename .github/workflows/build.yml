@@ -25,4 +25,8 @@ jobs:
         gradle-version: 8.2
 
     - name: Build Debug APK
-      run: gradle assembleDebug -q
+      run: |
+        gradle assembleDebug --no-daemon > build.log 2>&1 || true
+        echo "=== CRITICAL ERROR SNAPSHOT ==="
+        grep -E -i -A 3 -B 2 "error|failed|exception|does not exist" build.log || cat build.log | tail -n 30
+        exit $(grep -q "BUILD SUCCESSFUL" build.log && echo 0 || echo 1)
