@@ -25,4 +25,4 @@ jobs:
         gradle-version: 8.2
 
     - name: Build Debug APK
-      run: gradle assembleDebug --info
+      run: gradle assembleDebug -q
